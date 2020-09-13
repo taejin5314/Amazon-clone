@@ -1,4 +1,4 @@
-Project Name: Amazon Clone
+## Project Name: Amazon Clone
 
 This project is cloning Amazon website by using React.
 
