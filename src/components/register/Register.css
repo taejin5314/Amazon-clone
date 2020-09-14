@@ -1,0 +1,106 @@
+@media (max-height: 400px) {
+    body {
+        background-color: white;
+    }
+}
+
+.register {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register__container {
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 20px;
+    border: 1px solid lightgray;
+}
+
+.register__container>h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.register__container>form>h5 {
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 3px;
+}
+
+.register__container>form>input {
+    height: 25px;
+    width: 97%;
+    border-radius: 3px;
+    border: 1px solid #a6a6a6;
+    margin-bottom: 10px;
+}
+
+.register__passwordAlert {
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.register__container>form>p {
+    font-size: 12px;
+}
+
+.register__container>form>p>span {
+    color: #1188BB;
+}
+
+.register__signIn {
+    font-size: 12px;
+}
+
+.register__createAccount {
+    margin-top: 10px;
+    font-size: 12px;
+    background: linear-gradient(to bottom, #3298dc, #18b);
+    border-color: #18b;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid;
+    cursor: pointer;
+    width: 100%;
+    height: 32px;
+    margin-bottom: 15px;
+}
+
+.register__createAccount:disabled {
+    background: #dddddd;
+    cursor: not-allowed;
+}
+
+.register__createAccount:disabled:hover {
+    background: #dddddd;
+    cursor: not-allowed;
+}
+
+.register__createAccount:hover {
+    background: linear-gradient(to bottom, #3d7eaa, rgb(29, 124, 165));
+}
+
+.divider__inner {
+    height: 44px;
+    margin-top: 25px;
+    margin-bottom: -22px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.03) 3px, transparent);
+    z-index: 0;
+    zoom: 1;
+}
+
+.divider__inner::after {
+    display: block;
+    width: 100%;
+    height: 44px;
+    background-color: transparent !important;
+    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0), #fff);
+    z-index: 1;
+    content: '';
+}

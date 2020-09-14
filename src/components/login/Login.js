@@ -1,26 +1,24 @@
 import { auth } from '../../firebase';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './Login.css'
 
 function Login() {
+    const history = useHistory();
     const [Email, setEmail] = useState('');
     const [Password, setPassword] = useState('');
 
     const signIn = e => {
         e.preventDefault();
-    }
-
-    const register = e => {
-        e.preventDefault();
 
         auth
-            .createUserWithEmailAndPassword(Email, Password)
-            .then((auth) => {
-                console.log(auth);
+            .signInWithEmailAndPassword(Email, Password)
+            .then(auth => {
+                history.push('/')
             })
             .catch(error => alert(error.message))
     }
+
     return (
         <div className="login">
             <Link to="/">
@@ -44,10 +42,12 @@ function Login() {
                 </form>
 
                 <p>
-                    By signing-in you agree to the <strong>AMAZON CLONE</strong> Conditions of Use & Sale. Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
+                    By signing-in you agree to the <strong style={{ color: "#1188BB" }}>AMAZON CLONE</strong> Conditions of Use & Sale. Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
                 </p>
 
-                <button onClick={register} className='login__registerButton'>Create your Amazon Account</button>
+                <Link to='/register'>
+                    <button className='login__registerButton'>Create your Amazon Account</button>
+                </Link>
             </div>
         </div>
     )
