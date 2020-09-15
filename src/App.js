@@ -14,6 +14,7 @@ import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
 import Register from './components/register/Register';
 import Payment from './components/payment/Payment';
+import Orders from './components/orders/Orders';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 
@@ -44,6 +45,11 @@ function App() {
     <Router>
       <div className="app">
         <Switch>
+          <Route path="/orders">
+            <Header />
+            <Orders userId={user} />
+          </Route>
+
           <Route path="/checkout">
             <Header />
             <Checkout />
@@ -63,6 +69,7 @@ function App() {
               <Payment />
             </Elements>
           </Route>
+
 
           <Route exact path="/">
             <Header />

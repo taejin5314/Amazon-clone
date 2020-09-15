@@ -30,3 +30,35 @@
 .payment__details {
     flex: 0.8;
 }
+
+.payment__details>form {
+    max-width: 400px;
+}
+
+.payment__priceContainer>h3 {
+    padding-bottom: 20px;
+}
+
+.payment__priceContainer>button {
+    margin-top: 10px;
+    font-size: 12px;
+    background: linear-gradient(to bottom, #3298dc, #18b);
+    border-color: #18b;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid;
+    cursor: pointer;
+    width: 100%;
+    height: 32px;
+    margin-bottom: 15px;
+}
+
+.payment__priceContainer>button:disabled {
+    background: #dddddd;
+    cursor: not-allowed;
+}
+
+.ayment__priceContainer>button:disabled:hover {
+    background: #dddddd;
+    cursor: not-allowed;
+}
