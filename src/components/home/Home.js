@@ -3,7 +3,8 @@ import './Home.css';
 import Slider from "react-slick";
 import NextArrow from './customArrow/NextArrow';
 import PrevArrow from './customArrow/PrevArrow';
-import Product from '../product/Product'
+import CopyrightOutlinedIcon from '@material-ui/icons/CopyrightOutlined';
+import Product from '../product/Product';
 
 
 function Home() {
@@ -18,6 +19,10 @@ function Home() {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />
     };
+
+    const backToTop = () => {
+        document.documentElement.scrollTop = 0;
+    }
     return (
         <div className="home">
 
@@ -93,6 +98,248 @@ function Home() {
                     price={1094.98}
                     image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
                     rating={4} />
+            </div>
+
+            <div className="home__footer">
+                <div onClick={backToTop} className="home__backToTop">
+                    <span>Back to top</span>
+                </div>
+
+                <div className="home__footerNav">
+                    <div className="home__footerNavLink">
+                        <strong className="home__footerNavLinkTitle">Get to Know Us</strong>
+                        <small className="home__footerNavLinkName">
+                            Careers
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Amazon and Our Planet
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Invester Relations
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Press Releases
+                        </small>
+                    </div>
+
+                    <div className="home__footerNavLink">
+                        <strong className="home__footerNavLinkTitle">Make Money with Us</strong>
+                        <small className="home__footerNavLinkName">
+                            Sell on Amazon
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Sell Under Amazon Accelerator
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Amazon Associates
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Sell on Amazon Handmade
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Advertise Your Products
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Independently Publish with Us
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Host and Amazon Hub
+                        </small>
+                    </div>
+
+                    <div className="home__footerNavLink">
+                        <strong className="home__footerNavLinkTitle">Amazon Payment Products</strong>
+                        <small className="home__footerNavLinkName">
+                            Amazon.ca Rewards Mastercard
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Shop with Points
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Reload Your Balance
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Amazon Currency Converter
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Gift Cards
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Amazon Cash
+                        </small>
+                    </div>
+
+                    <div className="home__footerNavLink">
+                        <strong className="home__footerNavLinkTitle">Let Us Help You</strong>
+                        <small className="home__footerNavLinkName">
+                            COVID-19 and Amazon
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Shipping Rates & Policies
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Amazon Prime
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Returns Are Easy
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Manage your Content and Devices
+                        </small>
+                        <small className="home__footerNavLinkName">
+                            Customer Service
+                        </small>
+                    </div>
+                </div>
+
+                <div className="home__footerNavBottom">
+                    <div className="home__footerNavBottomContainer">
+                        <div className="home__footerNavBottomContent">
+                            <strong className="home__footerNavBottomTitle">
+                                Amazon Music
+                            </strong>
+                            <small className="home__footerNavBottomName">
+                                Stream millions<br /> of songs
+                            </small>
+                        </div>
+
+                        <div className="home__footerNavBottomContent">
+                            <strong className="home__footerNavBottomTitle">
+                                Goodreads
+                            </strong>
+                            <small className="home__footerNavBottomName">
+                                Book Review<br />
+                                & recommendations
+                            </small>
+                        </div>
+                    </div>
+
+                    <div className="home__footerNavBottomContainer">
+                        <div className="home__footerNavBottomContent">
+                            <strong className="home__footerNavBottomTitle">
+                                Amazon Advertising
+                            </strong>
+                            <small className="home__footerNavBottomName">
+                                Find, attract, and<br />
+                                engage customers
+                            </small>
+                        </div>
+
+                        <div className="home__footerNavBottomContent">
+                            <strong className="home__footerNavBottomTitle">
+                                IMDb
+                            </strong>
+                            <small className="home__footerNavBottomName">
+                                Movies, TV<br />
+                                & Celebrities
+                            </small>
+                        </div>
+
+                        <div className="home__footerNavBottomContent">
+                            <strong className="home__footerNavBottomTitle">
+                                Whole Foods Market
+                            </strong>
+                            <small className="home__footerNavBottomName">
+                                We Believe in<br />
+                                Real Food
+                            </small>
+                        </div>
+                    </div>
+
+                    <div className="home__footerNavBottomContainer">
+                        <div className="home__footerNavBottomContent">
+                            <strong className="home__footerNavBottomTitle">
+                                Amazon Drive
+                            </strong>
+                            <small className="home__footerNavBottomName">
+                                Cloud storage<br />
+                                from Amazon
+                            </small>
+                        </div>
+
+                        <div className="home__footerNavBottomContent">
+                            <strong className="home__footerNavBottomTitle">
+                                Amazon Photos
+                            </strong>
+                            <small className="home__footerNavBottomName">
+                                Unlimited Photo Storage<br />
+                                Free With Prime
+                            </small>
+                        </div>
+
+                        <div className="home__footerNavBottomContent">
+                            <strong className="home__footerNavBottomTitle">
+                                Amazon Renewed
+                            </strong>
+                            <small className="home__footerNavBottomName">
+                                Like-new products<br />
+                                you can trust
+                            </small>
+                        </div>
+
+                    </div>
+
+                    <div className="home__footerNavBottomContainer">
+                        <div className="home__footerNavBottomContent">
+                            <strong className="home__footerNavBottomTitle">
+                                Amazon Web Services
+                            </strong>
+                            <small className="home__footerNavBottomName">
+                                Scalable Cloud<br />
+                                Computing Services
+                            </small>
+                        </div>
+
+                        <div className="home__footerNavBottomContent">
+                            <strong className="home__footerNavBottomTitle">
+                                Shopbop
+                            </strong>
+                            <small className="home__footerNavBottomName">
+                                Designer<br />
+                                Fashion Brands
+                            </small>
+                        </div>
+
+                        <div className="home__footerNavBottomContent">
+                            <strong className="home__footerNavBottomTitle">
+                                Amazon Second Chance
+                            </strong>
+                            <small className="home__footerNavBottomName">
+                                Pass it on, trade it in,<br />
+                                give it a second life
+                            </small>
+                        </div>
+                    </div>
+
+                    <div className="home__footerNavBottomContainer">
+                        <div className="home__footerNavBottomContent">
+                            <strong className="home__footerNavBottomTitle">
+                                Book Depository
+                            </strong>
+                            <small className="home__footerNavBottomName">
+                                Books With Free<br />
+                                Delivery Worldwide
+                            </small>
+                        </div>
+
+                        <div className="home__footerNavBottomContent">
+                            <strong className="home__footerNavBottomTitle">
+                                Warehouse Deals
+                            </strong>
+                            <small className="home__footerNavBottomName">
+                                Open-Box<br />
+                                Discounts
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="home__footerCopyRight">
+                    <span className='home__footerCopyRightContent'>Conditions of Use</span>
+                    <span className='home__footerCopyRightContent'>Privacy Notice</span>
+                    <span className='home__footerCopyRightContent'>Interest-based Ads</span>
+                    <span className='home__footerCopyRightYear'><CopyrightOutlinedIcon style={{ display: 'inline-flex', verticalAlign: 'bottom', fontSize: '14px' }} /> 2008 - 2020, Amazon.com, Inc. or its affiliates</span>
+                </div>
             </div>
         </div>
     )

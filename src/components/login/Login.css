@@ -57,7 +57,7 @@
 }
 
 .login__signInButton:hover {
-    background: linear-gradient(to bottom, #3d7eaa, rgb(29, 124, 165));
+    background-image: linear-gradient(to bottom, #3d7eaa, rgb(29, 124, 165));
 }
 
 .login__container>p {
@@ -71,4 +71,5 @@
     border: 1px solid;
     margin-top: 10px;
     border-color: darkgray;
+    cursor: pointer;
 }
