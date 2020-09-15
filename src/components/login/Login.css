@@ -1,3 +1,9 @@
+@media (max-height: 400px) {
+    body {
+        background-color: white;
+    }
+}
+
 .login {
     height: 100vh;
     background-color: white;
