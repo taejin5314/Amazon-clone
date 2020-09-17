@@ -1,0 +1,126 @@
+.navbar {
+    background-color: transparent;
+    height: 37px;
+    width: 35px;
+    border-radius: 3px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #dddddd;
+    top: 10px;
+    left: 5px;
+    z-index: 100;
+}
+
+.navbar__click {
+    font-size: 2rem;
+    background: none;
+    color: white;
+}
+
+.navbar__menu.active .navbar__click {
+    font-size: 24px;
+    position: fixed;
+    top: 7px;
+    left: 360px;
+}
+
+.navbar__menu {
+    z-index: 100;
+    background-color: white;
+    width: 350px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 500ms;
+}
+
+.navbar__menuContainer {
+    overflow-y: scroll;
+}
+
+
+.navbar__menu.active {
+    left: 0;
+    transition: 200ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.navbar__menu.active>a {
+    text-decoration: none;
+}
+
+.navbar__menuItems a {
+    text-decoration: none;
+}
+
+.navbar__header {
+    width: 100%;
+    text-align: center;
+    background-color: #232f3e;
+    color: white;
+    height: 50px;
+    position: relative;
+}
+
+.navbar__user {
+    position: absolute;
+    top: 12px;
+    left: 30px;
+    font-size: 20px;
+}
+
+.navbar__menuTitle {
+    padding-right: 20px;
+    padding-left: 36px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    color: #969397;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.navbar__menuItems a {
+    text-decoration: none;
+    color: #111111;
+}
+
+.navbar__menuItem {
+    padding-right: 20px;
+    padding-left: 36px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__menuItem:hover {
+    background-color: #eaeded;
+    color: #111111;
+    cursor: pointer;
+}
+
+.navbar__clickArrow:hover {
+    color: black !important;
+}
+
+.navbar__menuSeparator {
+    border-top: 1px solid #d5dbdb;
+    padding: 2px 0 0 0;
+}
+
+.navbar__itemSeparator {
+    border-bottom: 1px solid #d5dbdb;
+    padding: 2px 0 0 0;
+    margin: 2px 31px 0 36px;
+}
+
+.navbar__blank {
+    height: 30px;
+}

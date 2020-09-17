@@ -1,7 +1,8 @@
 
 export const initialState = {
     basket: [],
-    user: null
+    user: null,
+    disable: false
 };
 
 export const getBasketTotal = (basket) =>
@@ -11,6 +12,11 @@ const reducer = (state, action) => {
 
     // console.log(action);
     switch (action.type) {
+        case "TOGGLE_DISABLE":
+            return {
+                ...state,
+                disable: !state.disable
+            }
         case 'ADD_TO_BASKET':
             return {
                 ...state,
@@ -29,7 +35,6 @@ const reducer = (state, action) => {
                     `Cant remove product (id: ${action.id}) as its not in basket!`
                 )
             }
-
             return {
                 ...state,
                 basket: newBasket

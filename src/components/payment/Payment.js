@@ -11,7 +11,7 @@ import axios from '../../axios';
 import { db } from '../../firebase';
 
 function Payment() {
-    const [{ basket, user }, dispatch] = useStateValue();
+    const [{ basket, user, disable }, dispatch] = useStateValue();
     const history = useHistory();
 
     const stripe = useStripe();
@@ -79,10 +79,10 @@ function Payment() {
     }
 
     return (
-        <div className="payment">
+        <div className={disable ? "payment disable" : "payment"} >
             <div className="payment__container">
                 <h1>
-                    Checkout (<Link to="checkout">{basket?.length} items</Link>)
+                    Checkout (<Link to="/checkout">{basket?.length} items</Link>)
                 </h1>
                 <div className="payment__section">
                     <div className="payment__title">
@@ -155,7 +155,7 @@ function Payment() {
 
                 </div>
             </div>
-        </div>
+        </ div>
     )
 }
 

@@ -26,3 +26,22 @@
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
 }
+
+/* Disable checkout page */
+
+.checkout.disable {
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.checkout.disable::before {
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    margin-top: -20px;
+}

@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 import FlipMove from 'react-flip-move';
 
 function Checkout() {
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, disable }, dispatch] = useStateValue();
 
     return (
-        <div className="checkout">
+        <div className={disable ? "checkout disable" : "checkout"}>
             <div className="checkout__left">
                 <img className="checkout__ad" src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" alt=""
                 />

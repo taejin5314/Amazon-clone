@@ -5,6 +5,7 @@ import NextArrow from './customArrow/NextArrow';
 import PrevArrow from './customArrow/PrevArrow';
 import CopyrightOutlinedIcon from '@material-ui/icons/CopyrightOutlined';
 import Product from '../product/Product';
+import { useStateValue } from '../../StateProvider';
 
 
 function Home() {
@@ -23,8 +24,11 @@ function Home() {
     const backToTop = () => {
         document.documentElement.scrollTop = 0;
     }
+
+    const [{ disable }, dispatch] = useStateValue();
+
     return (
-        <div className="home">
+        <div className={disable ? 'home disable' : 'home'}>
 
             <Slider {...settings} className="home__container">
                 <div>

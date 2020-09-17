@@ -5,7 +5,7 @@ import './Orders.css'
 import { db } from '../../firebase';
 
 function Orders() {
-    const [{ user }, dispatch] = useStateValue();
+    const [{ user, disable }, dispatch] = useStateValue();
     const [Orders, setOrders] = useState([]);
 
     useEffect(() => {
@@ -27,7 +27,7 @@ function Orders() {
     }, [user])
 
     return (
-        <div className="orders">
+        <div className={disable ? "orders disable" : "orders"}>
             <h1>Your Orders</h1>
 
             <div className="orders__order">

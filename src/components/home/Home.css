@@ -134,3 +134,21 @@
   margin-left: 10px;
   color: #767676;
 }
+
+/* Disable home page */
+
+.home.disable {
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.home.disable::before {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+}
