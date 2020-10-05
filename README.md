@@ -56,11 +56,7 @@ I used firestore from firebase by using `firebaseApp.firestore()`. Firestore mak
 
 ![Footer](https://user-images.githubusercontent.com/21342802/95133753-cda60900-072f-11eb-8f22-1d16f41260cb.png)
 
-## Firebase
-
-Using firebase api from google so that makes it easy to handle database such as user information.
-
-## Deployment
+## Firebase Deployment
 
 `firebase init`: Initializing firebase. The base root should be build folder. <br />
 `npm run build`: Build the application. <br />
