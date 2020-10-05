@@ -6,7 +6,7 @@ This project is cloning Amazon website by using React.
 
 ![LoginPage](https://user-images.githubusercontent.com/21342802/95131215-aea57800-072b-11eb-9e41-4bca2aaecdcf.png)
 
-I used `firebase.auth()` using firebase package. `firebase.auth()signInWithEmailAndPassword(email, password)` made it easy to setting the login page much easier.
+I used `firebase.auth()` using firebase package. `firebase.auth().signInWithEmailAndPassword(email, password)` made it easy to setting the login page much easier.
 
 ## 2. Register Page
 
